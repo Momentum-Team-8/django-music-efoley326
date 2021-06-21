@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% extends "base.html" %}
+{% block content %}
+<!--  this is where we render our album information to the browser -->
+<h1>All Albums</h1>
+
+<div>
+    {% for album in albums %}
+        <div class="card">
+            {% if album.name %}
+                <p>{{album.name}}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

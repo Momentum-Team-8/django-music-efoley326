@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muzak</title>
+</head>
+<body>
+  <div>
+    {% block content %}
+    <form action="albums/new" method="GET">
+        <label for="artist_name">Enter artist name: </label>
+        <input id="album_name" type="text" name="name_field" value="album name">
+        <input type="submit" value="OK">
+    </form>
+    <p></p>
+
+
+    {% endblock %}
+  </div>
+</body>
+</html>
